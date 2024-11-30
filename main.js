@@ -3,6 +3,7 @@ console.log("testing");
 const model = {
   firstUse : true,
   listUpdated : [],
+  
   init : function(){
     for (let i=0; i < model.items.length; i++){model.listUpdated[i]=0;}
   }
@@ -11,11 +12,22 @@ const model = {
 
 const view = {
   listCreated : false,
+  wbPs : [],
+  wbArchiveBttns : [],
+  wbDDButtons : [],
+  newWishBtn : document.getElementById("newWishBtn"),
+  viewlistBtn : document.getElementById("viewlistBtn"),
   wish_input : document.getElementById("wish_input"),
   wish_submit : document.getElementById("wish_submit"),
   wish_input_form : document.getElementById("form"),
-  wishlist_div : document.getElementById("wishlist"),
-  workbook_div : document.getElementById("workbook")
+  wishlist_div : document.getElementById("wishlistDiv"),
+  wishList : document.getElementById("wishList"),
+  workbook_div : document.getElementById("workbook"),
+  updateWishDiv : document.getElementById("updateWish"),
+  listBackButton : document.getElementById("back"),
+  workbookWishlistDiv : document.getElementById("workbookWishList"
+
+  )
 };
 
 const controller = {
@@ -27,6 +39,9 @@ const controller = {
     // so need something in the model to say list updated
     // if not, need to update the listview ui for the first time
     
+  },
+  formSubmitted : function(){
+
   },  
   init : function(){
     if (navigator.storage && navigator.storage.persist) {
@@ -46,7 +61,17 @@ const controller = {
         model.archived = JSON.parse(localStorage.getItem("wbwarchives"));
         model.init();
       }
-        // need to finish the init fuction         
+
+      // need to add all event listeners
+      
+      if(model.firstUse){
+          // need to unhide the appropriate form
+          view.wish_input_form.classList.remove("hidden")
+      }
+      else {
+
+      }
+             
   }
 };
 

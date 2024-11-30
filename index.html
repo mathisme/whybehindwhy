@@ -7,13 +7,23 @@
   <link rel="stylesheet" href="main.css">
 </head>
 <body>
-  <div id="form">
+  <div id="form" class="hidden">
     <label for="wish_input">Enter your goal/wish</label>
     <input type="text" id="wish_input" />
     <button id="wish_submit">Submit</button>
   </div>
-  <div id="wishlist"></div>
-  <div id="workbook"></div>
+  <div id="updateWish" class="hidden">
+
+  </div>
+  <div id="wishlistDiv" class="hidden">
+    <ul id="wishList"></ul>
+    <button id="back">Back</button>
+  </div>
+  <div id="workbook" class="hidden">
+    <div id="workbookWishList"></div>
+    <button id="newWishBtn">Add New Wish</button>
+    <button id="viewlistBtn">View List</button>
+  </div>
 <script src="main.js"></script>
 </body>
 </html>
