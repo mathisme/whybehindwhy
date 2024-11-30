@@ -12,7 +12,7 @@ const model = {
 
 const view = {
   listCreated : false,
-  wbPs : [],
+  wbSpans : [],
   wbArchiveBttns : [],
   wbDDButtons : [],
   newWishBtn : document.getElementById("newWishBtn"),
@@ -25,9 +25,11 @@ const view = {
   workbook_div : document.getElementById("workbook"),
   updateWishDiv : document.getElementById("updateWish"),
   listBackButton : document.getElementById("back"),
-  workbookWishlistDiv : document.getElementById("workbookWishList"
-
-  )
+  workbookWishlistDiv : document.getElementById("workbookWishList"),
+  wishSpan : document.getElementById("wishSpan"),
+  reasonText : document.getElementById("reasonText"),
+  why_input : document.getElementById("why_input"),
+  sumbit_why : document.getElementById("sumbit_why")
 };
 
 const controller = {

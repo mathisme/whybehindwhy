@@ -1,0 +1,5 @@
+Styling notes
+
+For the div with id form will want two rows
+The first rows spans the whole div and is the label Enter your goal/wish
+The second row has two columns, 75% and 25% with the text input and submit button
